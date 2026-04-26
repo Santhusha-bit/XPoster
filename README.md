@@ -1,4 +1,4 @@
-# X Poster — AI Daily Content Engine
+# X Poster - AI Daily Content Engine
 
 Generate viral X posts every day using AI trend research, tailored to your voice and niche.
 
@@ -43,10 +43,3 @@ npm run build
 - Keyboard shortcuts: 1 to 5 switch tabs, Ctrl/Cmd+G goes to Generate
 - Mobile responsive with bottom navigation
 
-## Stack
-
-React 19, Vite 8, CSS Modules, Lucide React, Claude claude-sonnet-4-20250514
-
-## Em dashes
-
-Zero. Verified on every build.
