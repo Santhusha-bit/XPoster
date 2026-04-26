@@ -1,0 +1,227 @@
+/* ---- Desktop sidebar ---- */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: var(--sidebar-w);
+  height: 100vh;
+  background: var(--ink);
+  display: flex;
+  flex-direction: column;
+  padding: 24px 14px;
+  overflow-y: auto;
+  z-index: 100;
+}
+
+/* ---- Mobile bar ---- */
+.mobileBar {
+  display: none;
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  height: 56px;
+  background: var(--ink);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 16px;
+  z-index: 200;
+}
+
+.menuBtn {
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.7);
+  display: flex;
+  align-items: center;
+  padding: 6px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.5);
+  z-index: 150;
+}
+
+.mobileDrawer {
+  display: none;
+  position: fixed;
+  top: 56px; left: 0;
+  width: 260px;
+  height: calc(100vh - 56px);
+  background: var(--ink);
+  padding: 20px 14px;
+  flex-direction: column;
+  z-index: 160;
+  transform: translateX(-100%);
+  transition: transform .25s ease;
+  overflow-y: auto;
+}
+
+.drawerOpen { transform: translateX(0); }
+
+@media (max-width: 768px) {
+  .sidebar { display: none; }
+  .mobileBar { display: flex; }
+  .overlay { display: block; }
+  .mobileDrawer { display: flex; }
+}
+
+/* ---- Shared ---- */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0 6px;
+  margin-bottom: 28px;
+}
+
+.logoIcon {
+  width: 32px; height: 32px;
+  background: var(--accent);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  flex-shrink: 0;
+}
+
+.logoName {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+}
+
+.logoSub {
+  font-size: 10px;
+  color: rgba(255,255,255,.3);
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+
+.profilePill {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 99px;
+  padding: 5px 12px;
+  margin-bottom: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  color: rgba(255,255,255,.65);
+}
+
+.profileDot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--success);
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  flex: 1;
+}
+
+.navBtn {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  width: 100%;
+  padding: 9px 10px;
+  border-radius: var(--r-md);
+  background: none;
+  border: none;
+  color: rgba(255,255,255,.4);
+  font-size: 13.5px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: left;
+  transition: all .15s;
+  position: relative;
+}
+
+.navBtn:hover { background: rgba(255,255,255,.07); color: rgba(255,255,255,.8); }
+
+.navBtn.active {
+  background: var(--accent);
+  color: white;
+}
+
+.badge {
+  margin-left: auto;
+  background: rgba(255,255,255,.18);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 99px;
+}
+
+.navBtn.active .badge { background: rgba(255,255,255,.25); }
+
+.stats {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  background: rgba(255,255,255,.04);
+  border: 1px solid rgba(255,255,255,.07);
+  border-radius: var(--r-md);
+  padding: 12px 14px;
+  margin-top: 20px;
+  margin-bottom: 12px;
+}
+
+.stat { display: flex; align-items: center; gap: 8px; flex: 1; }
+
+.statIcon { color: rgba(255,255,255,.25); flex-shrink: 0; }
+
+.statVal {
+  font-size: 16px;
+  font-weight: 700;
+  color: white;
+  font-family: var(--font-display);
+  line-height: 1.1;
+}
+
+.statLbl {
+  font-size: 10px;
+  color: rgba(255,255,255,.28);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
+
+.statDiv {
+  width: 1px; height: 28px;
+  background: rgba(255,255,255,.07);
+  flex-shrink: 0;
+  margin: 0 10px;
+}
+
+.tip {
+  background: rgba(255,255,255,.03);
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: var(--r-md);
+  padding: 12px;
+}
+
+.tipTitle {
+  font-size: 10px;
+  font-weight: 700;
+  color: var(--accent-2);
+  text-transform: uppercase;
+  letter-spacing: .06em;
+  margin-bottom: 5px;
+}
+
+.tipText {
+  font-size: 11.5px;
+  color: rgba(255,255,255,.3);
+  line-height: 1.55;
+}

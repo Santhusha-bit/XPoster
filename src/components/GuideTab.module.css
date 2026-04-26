@@ -1,0 +1,99 @@
+.page { max-width: 680px; margin: 0 auto; padding: 44px 36px 80px; }
+.header { margin-bottom: 32px; }
+.title { font-size: 26px; font-weight: 800; color: var(--ink); margin-bottom: 4px; }
+.subtitle { font-size: 14px; color: var(--muted); }
+
+.stepsCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2xl);
+  padding: 28px;
+  box-shadow: var(--sh-sm);
+  margin-bottom: 20px;
+}
+
+.step { display: flex; gap: 18px; }
+.stepLeft { display: flex; flex-direction: column; align-items: center; }
+.stepIconWrap {
+  width: 36px; height: 36px;
+  border-radius: 50%;
+  background: var(--accent-light);
+  color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.stepLine {
+  width: 2px;
+  flex: 1;
+  background: var(--border);
+  margin: 5px 0;
+  min-height: 16px;
+}
+
+.stepBody { padding-bottom: 28px; flex: 1; }
+.step:last-child .stepBody { padding-bottom: 0; }
+
+.stepNum {
+  display: block;
+  font-size: 10px; font-weight: 700;
+  color: var(--accent);
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  margin-bottom: 3px;
+}
+.stepTitle { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 5px; }
+.stepText { font-size: 13.5px; color: var(--muted); line-height: 1.65; }
+
+.timingCard {
+  background: var(--ink);
+  border-radius: var(--r-2xl);
+  padding: 24px;
+  margin-bottom: 20px;
+}
+.timingHeader {
+  display: flex; align-items: center; gap: 7px;
+  font-size: 11px; font-weight: 700;
+  color: rgba(255,255,255,.4);
+  text-transform: uppercase; letter-spacing: .07em;
+  margin-bottom: 16px;
+}
+.timingGrid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+.timingItem {
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: var(--r-lg);
+  padding: 14px;
+}
+.timingLabel { font-size: 10px; font-weight: 600; color: rgba(255,255,255,.3); text-transform: uppercase; letter-spacing: .06em; margin-bottom: 5px; }
+.timingTime { font-size: 17px; font-weight: 800; color: white; font-family: var(--font-display); margin-bottom: 3px; }
+.timingNote { font-size: 11px; color: rgba(255,255,255,.3); }
+
+.formatsCard {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--r-2xl);
+  padding: 24px;
+  box-shadow: var(--sh-sm);
+}
+.formatsTitle { font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 16px; }
+.formatsGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+@media (max-width: 480px) { .formatsGrid { grid-template-columns: 1fr; } }
+
+.formatItem {
+  display: flex; align-items: flex-start; gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+  padding: 12px 14px;
+}
+.formatArrow {
+  width: 22px; height: 22px;
+  border-radius: var(--r-sm);
+  background: var(--accent-light);
+  color: var(--accent);
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+  margin-top: 1px;
+}
+.formatName { font-size: 13px; font-weight: 700; color: var(--ink-3); margin-bottom: 2px; }
+.formatBest { font-size: 11.5px; color: var(--muted); }
